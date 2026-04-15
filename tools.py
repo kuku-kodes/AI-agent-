@@ -47,8 +47,8 @@ def scrape_website(url: str) -> str:
         text = soup.get_text(separator=" ", strip=True)
         text = re.sub(r'\s+', ' ', text)  # Normalize whitespace
 
-        # Limit to 5000 characters for performance and API limits
-        return text[:2000]
+        # Limit to 1000 characters for performance and API limits
+        return text[:1000]
     except Exception as e:
         return f"Error scraping website: {e}"
 
